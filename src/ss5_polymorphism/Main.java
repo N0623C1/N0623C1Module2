@@ -47,10 +47,10 @@ public class Main {
         Student: 3 thuộc tính
         Person: 2 thuộc tính
          */
-        Person person = new Person(); // Ngầm định: Con => Cha
+        Person person = new Teacher(); // Ngầm định: Con => Cha
 
         // instanceof kiểm tra đối tượng hiện tại có phải là Student hay không => Kiểm tra lúc runtime
-        if(person instanceof Student) {
+        if (person instanceof Student) {
             Student student = (Student) person; // Tường minh: Cha => Con
         }
     }
