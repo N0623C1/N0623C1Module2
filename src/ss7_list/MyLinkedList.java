@@ -1,11 +1,11 @@
 package ss7_list;
 
-public class MyLinkedList {
+public class MyLinkedList<E> {
     private class Node {
-        int value;
+        E value;
         Node next; // mặc định tham chiếu đến null
 
-        public Node(int value) {
+        public Node(E value) {
             this.value = value;
         }
     }
@@ -14,7 +14,7 @@ public class MyLinkedList {
     private Node tail; // mặc định tham chiếu đến null
     private int size = 0;
 
-    public void addFirst(int element) {
+    public void addFirst(E element) {
         Node newNode = new Node(element);
 
         if (head == null) { // danh sách rỗng
@@ -27,7 +27,7 @@ public class MyLinkedList {
         size++;
     }
 
-    public void addLast(int element) {
+    public void addLast(E element) {
         Node newNode = new Node(element);
 
         if (head == null) { // danh sách rỗng
@@ -39,7 +39,7 @@ public class MyLinkedList {
         }
     }
 
-    public void add(int index, int element) {
+    public void add(int index, E element) {
         if(index < 0 || index > size) {
             System.out.println("Ngoài phạm vi");
         } else if(index == 0) {
